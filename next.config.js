@@ -1,3 +1,5 @@
 module.exports = {
-  reactStrictMode: true,
+  images: {
+    domains: ['kantiman.com.np'],
+  },
 }
