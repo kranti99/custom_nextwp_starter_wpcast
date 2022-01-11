@@ -9,6 +9,7 @@ export default function Post( data ){
             <h1>{post.title}</h1>
             <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} />
             <article dangerouslySetInnerHTML={{__html: post.content}}></article>
+            <div>{post.video}</div>
         </div>
     )
 
@@ -31,6 +32,9 @@ export async function getServerSideProps(context) {
                                 sourceUrl
                             }
                         }
+                        postsOptions {
+                            video
+                          }
                     }
                 }
             `,
@@ -68,6 +72,9 @@ export async function getServerSidePaths() {
                             node {
                                 sourceUrl
                             }
+                        }
+                        postsOptions {
+                            video
                         }
                     }
                 }
