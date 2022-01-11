@@ -14,7 +14,7 @@ export default function Post( data ){
 
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
     const res = await fetch('https://kantiman.com.np/graphql', {
         method: 'POST',
@@ -51,7 +51,7 @@ export async function getStaticProps(context) {
 
 }
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
 
     const res = await fetch('https://kantiman.com.np/graphql', {
         method: 'POST',
