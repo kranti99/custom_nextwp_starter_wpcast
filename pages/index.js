@@ -21,7 +21,7 @@ export default function Home( {posts} ){
 
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
 
     const res = await fetch('https://kantiman.com.np/graphql', {
         method: 'POST',
